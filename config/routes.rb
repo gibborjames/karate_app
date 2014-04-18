@@ -1,6 +1,9 @@
 Karate::Application.routes.draw do
 
   root to: "pages#index"
+  match "/news" => "pages#news", via: [:get]
+  match "/announcement" => "pages#announcement", via: [:get]
+  match "/about_us" => "pages#about_us", via: [:get]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -7,7 +7,7 @@ gem 'devise'
 gem 'bootstrap-sass', '2.3.2.0'
 # Draper
 gem 'draper', '~> 1.3'
-gem 'mysql2'
+gem 'sqlite3'
 gem 'carrierwave'
 #gem 'rmagick'
 gem "figaro"
@@ -40,13 +40,17 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :staging, :production do
+  gem 'mysql2'
+end
+
 group :development, :test do
   gem "rvm-capistrano"
   gem "rspec-rails"
   gem "factory_girl_rails"
   gem "pry"
   gem "better_errors"
-  gem "guard-rspec"
+  gem "guard-rspec", require: false
   gem "shoulda-matchers"
   gem 'terminal-notifier-guard'
   gem "webrat"

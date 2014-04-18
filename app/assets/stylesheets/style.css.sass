@@ -1,0 +1,231 @@
+@import "bootstrap"
+@import "mixins"
+
+html, body
+  min-width: 1046px
+  height: 100%
+//
+// *
+//   text-rendering: optimizeLegibility !important
+//   -webkit-font-smoothing: antialiased !important
+//   -webkit-backface-visibility: hidden
+//   @include box-sizing(border-box)
+//   &::selection
+//     background: #5AFFD0
+//   &::moz-selection
+//     background: #5AFFD0
+//
+// html, body
+//   min-width: 1046px
+//   height: 100%
+//   background: #e2ffc2
+//
+// .mainContainer
+//   min-height: 100%
+//   margin-bottom: -40px
+//   &:after
+//     content: ""
+//     display: block
+//     height: 40px
+//
+// section#main
+//   height: auto
+//   min-height: 100%
+//   position: relative
+//   padding-bottom: 286px
+//
+// body
+//   font-family: 'Averia Sans Libre', sans-serif
+//   font-size: 14px
+//   font-weight: 400
+//   background: #eee
+//   color: #444
+//   background: url('/assets/pon-bg.jpg') center center no-repeat #e2ffc2
+//   -webkit-background-size: cover
+//   -moz-background-size: cover
+//   -o-background-size: cover
+//   background-size: cover
+//   min-height: 840px
+//   &.guests
+//     min-height: 770px
+//   // @include gradient(#c7ffe3, #e2ffc2)
+//
+// .wrapper
+//   max-width: 960px
+//   min-width: 960px
+//   margin: 0 auto
+//   padding: 0 20px
+//   position: relative
+//
+// a
+//   &:focus
+//     outline: none
+//     text-decoration: none
+//   &:hover
+//     text-decoration: none
+//
+// .btn
+//   font-weight: 700
+//   display: inline-block
+//   padding: 5px 7px 3px
+//   color: #fff
+//   text-shadow: -1px -1px 0 #473E3E, 1px -1px 0 #473E3E, -1px 2px 0 #473E3E, 1px 2px 0 #473E3E
+//   position: relative
+//   border: 2px solid #473E3E
+//   border-bottom: 4px solid #473E3E
+//   min-width: 80px
+//   font-family: 'Luckiest Guy', sans-serif
+//   // Animation
+//   -webkit-animation-duration: 0.5s
+//   -moz-animation-duration: 0.5s
+//   -o-animation-duration: 0.5s
+//   animation-duration: 0.5s
+//   @include user-select(none)
+//   @include border-radius(12px)
+//   @include gradient(#ffde9d, #ff6000)
+//   &:before
+//     content: ""
+//     position: absolute
+//     top: 2px
+//     left: 6px
+//     height: 5px
+//     width: 43px
+//     background: url(/assets/btn-glow.png) no-repeat
+//     z-index: 1
+//   &:after
+//     content: ""
+//     position: absolute
+//     width: 100%
+//     height: 75%
+//     top: 10%
+//     left: 0
+//     z-index: 0
+//     @include gradient(#ffb72d, #ff9728)
+//     @include border-radius(40px 20px 50px 30px)
+//   &:focus
+//     color: #fff
+//   &[disabled]
+//     color: #fff
+//     cursor: not-allowed
+//     @include gradient(#ffde9d, #ff6000)
+//   &.inactive
+//     .activeBtnGlow
+//       display: none
+//   a
+//     color: #fff
+//     text-decoration: none
+//   .btnIcon
+//     display: inline-block
+//     margin-bottom: -3px
+//   span, .btnIcon, img
+//     z-index: 1
+//     position: relative
+//   .activeBtnGlow, .activeBtnGlowMin
+//     position: absolute
+//     top: -20px
+//     left: -8px
+//     height: 43px
+//     width: 46px
+//     z-index: 1
+//     background: url('/assets/slider-button-glow.png')
+//     @include opacity(0.7)
+//     @include animation-duration(7s)
+//     @include animation-loop(infinite)
+//   &:hover
+//     color: #fff
+//     @include gradient(#ffde9d, #ff6000)
+//     @include shadow(0 0 5px #FFE288)
+//     @include transition(all 0.3s ease-in-out)
+//   &:active
+//     color: #fff
+//   &.green
+//     @include gradient(#dcf28c, #70a833)
+//     &:after
+//       @include gradient(#92cb31, #92cb31)
+//   &.short
+//     min-width: 50px !important
+//     &:before
+//       width: 10px
+//   &.alt
+//     background: #63534b
+//     border: none
+//     @include shadow(0 3px 0 rgba(#fff, 0.6))
+//     &:after, &:before
+//       display: none
+//
+// .ponRow
+//   display: none
+//   width: 100%
+//   z-index: 0
+//   &:before, &:after
+//     display: table
+//     content: ""
+//     line-height: 0
+//   &:after
+//     clear: both
+//   [class*="ponSpan"]
+//     display: block
+//     min-height: 30px
+//     width: 100%
+//     -moz-box-sizing: border-box
+//     box-sizing: border-box
+//     float: left
+//   .ponSpan90
+//     width: 195px
+//   .ponSpan560
+//     width: 560px
+//     margin-left: 20px
+//   .ponSpan250
+//     width: 250px
+//     margin-left: 20px
+//
+// .ponLoading
+//   margin: 100px auto
+//   z-index: 1000
+//   width: 500px
+//   height: 420px
+//   font-size: 30px
+//   position: relative
+//   font-family: 'Luckiest Guy', sans-serif
+//   // background: url("/assets/load-ring.gif") center top no-repeat
+//   cursor: wait
+//   .text
+//     color: #fff
+//     text-shadow: -1px -1px 0 #5C8579, 1px -1px 0 #5C8579, -1px 2px 0 #5C8579, 1px 2px 0 #5C8579
+//     position: absolute
+//     bottom: 0
+//     width: 500px
+//     margin: 0 auto
+//     text-align: center
+//
+// .dropdown
+//   display: none
+//
+// .normalText
+//   font-family: 'Source Sans Pro', sans-serif
+//
+// .container
+//   width: 1046px
+//
+// .notice
+//   background: #FFFDC3
+//   width: 940px
+//   position: absolute
+//   z-index: 1
+//   padding: 5px
+//   top: 78px
+//   text-align: center
+//   border: 1px solid #F1D793
+//   border-radius: 5px
+//   color: #9C8750
+//   display: none
+//
+// .hide
+//   display: none
+//
+// .ponCoin
+//   background: url('/assets/pon-coin-icon.png') no-repeat
+//   height: 15px
+//   width: 15px
+//   display: inline-block
+//   vertical-align: -3px

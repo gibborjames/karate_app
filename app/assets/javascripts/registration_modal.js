@@ -6,9 +6,9 @@ var RegistrationModal = function() {
 
     initialize: function() {
       $(window).load(function() {
-        if ($('#myModal').length > 0) {
+        if ($('#registrationModal').length > 0) {
           setTimeout(function() {
-            $('#myModal').modal('show');
+            $('#registrationModal').modal('show');
           }, 500);
         }
       });

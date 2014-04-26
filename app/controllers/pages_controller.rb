@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   end
   def about_us
   end
+  def organization_registration
+  end
+  def member_registration
+  end
 end

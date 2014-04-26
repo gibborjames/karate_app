@@ -4,6 +4,8 @@ Karate::Application.routes.draw do
   match "/news" => "pages#news", via: [:get]
   match "/announcement" => "pages#announcement", via: [:get]
   match "/about_us" => "pages#about_us", via: [:get]
+  match "/organization_registration" => "pages#organization_registration", via: [:get]
+  match "/member_registration" => "pages#member_registration", via: [:get]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

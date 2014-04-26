@@ -1,11 +1,13 @@
-#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+#registrationModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
-        %h4#modalTitle Modal title
+        %h4#modalTitle Registration Online
       .modal-body
-        \...
+        %h5 Register Your Organization
+        %button.btn.btn-default= link_to "Organization", organization_registration_path
+        %h5 Member Registration
+        %button.btn.btn-default= link_to "Member", member_registration_path
       .modal-footer
-        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
-        %button.btn.btn-primary{:type => "button"} Save changes
+        www.karate.com.ph

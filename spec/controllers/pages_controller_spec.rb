@@ -29,4 +29,18 @@ describe PagesController do
       response.should be_success
     end
   end
+
+  describe "#organization_registration" do
+    it "it should return organization registration page" do
+      get :organization_registration
+      response.should be_success
+    end
+  end
+
+  describe "#member_registration" do
+    it "it should return member registration page" do
+      get :member_registration
+      response.should be_success
+    end
+  end
 end

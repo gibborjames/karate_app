@@ -1,0 +1,6 @@
+%header#globalHeader
+  %ul.nav-ul
+    - if user_signed_in?
+      %li.nav-li= link_to "SignOut", destroy_user_session_path, :method => :delete
+    - else
+      %li.nav-li= link_to "SignIn", new_user_session_path

@@ -41,10 +41,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :staging, :production do
-  gem 'mysql2'
-end
-
 group :development, :test do
   gem "rvm-capistrano"
   gem "rspec-rails"

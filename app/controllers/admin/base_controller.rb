@@ -4,6 +4,6 @@ class Admin::BaseController < ApplicationController
   layout 'admin/application'
 
   def index
-    binding.pry
+    
   end
 end

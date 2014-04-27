@@ -1,5 +1,6 @@
 Karate::Application.routes.draw do
 
+  devise_for :users
   root to: "pages#index"
   match "/news" => "pages#news", via: [:get]
   match "/announcement" => "pages#announcement", via: [:get]

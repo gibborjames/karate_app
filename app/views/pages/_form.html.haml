@@ -2,9 +2,18 @@
 
 .registrationForm
   = form_for (@user) do |form|
+    .firstname
+      = form.label :firstname
+      = form.text_field :firstname
+    .middlename
+      = form.label :middlename
+      = form.text_field :middlename
+    .lastname
+      = form.label :lastname
+      = form.text_field :lastname
     .email
       = form.label :email
-      = form.text_field :email
+      = form.email_field :email
     .password
       = form.label :password
       = form.password_field :password

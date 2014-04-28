@@ -6,6 +6,8 @@ Karate::Application.routes.draw do
     root to: "base#index"
   end
 
+  resources :users, :only => [:create]
+
   root to: "pages#index"
   match "/news" => "pages#news", via: [:get]
   match "/announcement" => "pages#announcement", via: [:get]

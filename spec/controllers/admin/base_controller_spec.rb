@@ -4,6 +4,7 @@ describe Admin::BaseController do
 
   describe '#index' do
     let!(:admin) { create(:admin) }
+    let!(:user) { create(:user) }
 
     context "redirect to admin path when user is admin" do
       it "should redirect to admin page" do
@@ -15,9 +16,9 @@ describe Admin::BaseController do
 
     context "redirect to root path when user is not admin" do
       it "should redirect to home page" do
-        # binding.pry
-        # get :index
-        # response.should be_success
+        sign_in user
+        get :index
+        response.should redirect_to(root_path)
       end
     end
   end

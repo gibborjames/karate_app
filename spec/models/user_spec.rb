@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe User do
-  # pending "add some examples to (or delete) #{__FILE__}"
+  context "validation" do
+    it { should validate_presence_of(:firstname) }
+    it { should validate_presence_of(:middlename) }
+    it { should validate_presence_of(:lastname) }
+  end
 end

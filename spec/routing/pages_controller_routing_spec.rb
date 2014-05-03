@@ -6,4 +6,5 @@ describe PagesController do
   it { get("/announcement").should route_to("pages#announcement") }
   it { get("/about_us").should route_to("pages#about_us") }
   it { get("/registration").should route_to("pages#registration") }
+  it { get("/account").should route_to("pages#account") }
 end

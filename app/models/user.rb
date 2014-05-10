@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   validates :firstname, presence: true
   validates :middlename, presence: true
   validates :lastname, presence: true
+  validates :facebook_account, presence: true
 end

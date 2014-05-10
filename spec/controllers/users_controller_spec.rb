@@ -11,7 +11,8 @@ describe UsersController do
             firstname: 'james',
             middlename: 'umil',
             lastname: 'delacruz',
-            password: SecureRandom.hex(5)
+            password: SecureRandom.hex(5),
+            facebook_account: 'www.facebook.com/12345'
           }
         }
         expect {

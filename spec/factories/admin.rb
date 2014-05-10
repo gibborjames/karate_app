@@ -5,6 +5,7 @@ FactoryGirl.define do
     middlename 'admin middlename'
     lastname 'admin lastname'
     email 'admin@example.com'
+    facebook_account 'www.facebook.com/12334'
     password 'password'
     password_confirmation 'password'
     admin true

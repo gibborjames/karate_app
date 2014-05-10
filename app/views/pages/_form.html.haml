@@ -14,10 +14,6 @@
     .email
       = form.label :email
       = form.email_field :email
-    .password
-      = form.label :password
-      = form.password_field :password
-      = form.label :password_confirmation
-      = form.password_field :password_confirmation
+      = form.hidden_field :password, value: SecureRandom.hex(5)
     .registrationBtn
       = form.submit "Submit"

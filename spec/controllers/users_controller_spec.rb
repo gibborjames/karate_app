@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe UsersController, focus: true do
+describe UsersController do
 
   describe "#create" do
     context 'with valid parameters' do

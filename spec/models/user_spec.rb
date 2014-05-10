@@ -7,4 +7,10 @@ describe User do
     it { should validate_presence_of(:lastname) }
     it { should validate_presence_of(:facebook_account) }
   end
+
+  context "relationship" do
+    it { should belong_to(:personal_info) }
+    it { should belong_to(:other_info) }
+    it { should belong_to(:case_of_emergency_info) }
+  end
 end

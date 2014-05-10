@@ -1,0 +1,29 @@
+default: &default
+  adapter: mysql2
+  enconding: utf8
+  pool: 5
+  timeout: 5000
+  username: root
+  password: password
+  host: localhost.dev
+
+development:
+  <<: *default
+  username: root
+  password: password
+  host: localhost.dev
+  database: shinkyokushin_development
+
+production:
+  <<: *default
+  username: root
+  password: password
+  host: localhost.dev
+  database: shinkyokushin_production
+
+test:
+  <<:  *default
+  username: root
+  password: password
+  host: localhost.dev
+  database: shinkyokushin_test

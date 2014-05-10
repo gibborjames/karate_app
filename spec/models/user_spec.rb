@@ -9,8 +9,8 @@ describe User do
   end
 
   context "relationship" do
-    it { should belong_to(:personal_info) }
-    it { should belong_to(:other_info) }
-    it { should belong_to(:case_of_emergency_info) }
+    it { should have_one(:personal_info) }
+    it { should have_one(:other_info) }
+    it { should have_one(:case_of_emergency_info) }
   end
 end

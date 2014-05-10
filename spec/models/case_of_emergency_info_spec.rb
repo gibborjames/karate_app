@@ -6,6 +6,6 @@ describe CaseOfEmergencyInfo do
   end
 
   context "relationship" do
-    it { should have_one(:user) }
+    it { should belong_to(:user) }
   end
 end

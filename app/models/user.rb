@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   validates :facebook_account, presence: true
 
   # relationship
-  belongs_to :personal_info
-  belongs_to :other_info
-  belongs_to :case_of_emergency_info
+  has_one :personal_info
+  has_one :other_info
+  has_one :case_of_emergency_info
 end

@@ -1,6 +1,6 @@
 class CaseOfEmergencyInfo < ActiveRecord::Base
 
-  # Relationshiop
+  # Relationship
   has_one :user
 
 end

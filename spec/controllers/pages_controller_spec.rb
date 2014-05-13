@@ -30,7 +30,7 @@ describe PagesController do
     end
   end
 
-  describe "#registration", focus:true do
+  describe "#registration" do
     it 'assign a new user to @user' do
       get :registration
       expect(assigns(:user)).to be_a_new(User)

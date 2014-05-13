@@ -7,6 +7,7 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'devise'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'mysql2'
+gem "nested_form"
 # Draper
 gem 'draper', '~> 1.3'
 gem 'carrierwave'

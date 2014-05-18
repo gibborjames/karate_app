@@ -14,7 +14,7 @@ describe PagesController do
       it "should return admin page" do
         sign_in admin
         get :index
-        redirect_to admin_root_path
+        response.should redirect_to admin_root_path
       end
     end
 
@@ -22,7 +22,7 @@ describe PagesController do
       it "should return member page" do
         sign_in user
         get :index
-        redirect_to account_path
+        response.should redirect_to account_path
       end
     end
   end

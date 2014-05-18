@@ -3,9 +3,27 @@ require 'spec_helper'
 describe PagesController do
 
   describe "#index" do
+    let(:user) { create(:user) }
+    let(:admin) { create(:admin) }
     it "it should return index page" do
-      get 'index'
+      get :index
       response.should be_success
+    end
+
+    context "when user is admin" do
+      it "should return admin page" do
+        sign_in admin
+        get :index
+        redirect_to admin_root_path
+      end
+    end
+
+    context "when user is not admin" do
+      it "should return member page" do
+        sign_in user
+        get :index
+        redirect_to account_path
+      end
     end
   end
 

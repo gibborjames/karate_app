@@ -21,6 +21,14 @@ describe Admin::MembersController do
         get :index
         response.should be_success
       end
+
+      it "assign @users to all user" do
+        james = create(:user)
+        rose = create(:user)
+        sign_in admin
+        get :index
+        assigns(:users).should eql([james, rose])
+      end
     end
   end
 end

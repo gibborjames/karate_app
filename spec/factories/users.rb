@@ -5,7 +5,7 @@ FactoryGirl.define do
     firstname 'james'
     middlename 'umil'
     lastname 'delacruz'
-    email 'user@example.com'
+    sequence(:email) {|n| "random-email#{n}@email.com"}
     facebook_account 'www.facebook.com/12334'
     password 'password'
     password_confirmation 'password'

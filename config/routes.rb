@@ -4,6 +4,7 @@ Karate::Application.routes.draw do
 
   namespace :admin do
     root to: "base#index"
+    resources :members, :only => [:index]
   end
 
   namespace :member do

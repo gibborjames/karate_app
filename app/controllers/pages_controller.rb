@@ -1,5 +1,15 @@
 class PagesController < ApplicationController
+
   def index
+    if user_signed_in?
+      if current_user.admin?
+        redirect_to admin_root_path
+      else
+        redirect_to account_path
+      end
+    else
+
+    end
   end
   def news
   end

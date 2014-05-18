@@ -6,9 +6,16 @@ Karate::Application.routes.draw do
     root to: "base#index"
   end
 
+  namespace :member do
+
+  end
+  # by pass namespace for member to force account path
+  match "/account" => "member/account#index", via: [:get]
+
   resources :users, :only => [:create]
 
   root to: "pages#index"
+  match "/account" => "member/account#index", via: [:get]
   match "/news" => "pages#news", via: [:get]
   match "/announcement" => "pages#announcement", via: [:get]
   match "/about_us" => "pages#about_us", via: [:get]

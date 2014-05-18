@@ -1,8 +1,6 @@
-%header#adminHeader
+%header#memberHeader
   %ul.nav-ul
     - if user_signed_in?
       %li.nav-li= link_to "SignOut", destroy_user_session_path, :method => :delete
-      %li.nav-li= link_to "LINK1", '#'
-      %li.nav-li= link_to "LINK2", '#'
     - else
       %li.nav-li= link_to "SignIn", new_user_session_path

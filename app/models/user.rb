@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   has_one :personal_info
   has_one :other_info
   has_one :case_of_emergency_info
+
+  def fullname
+    "#{self.lastname} #{self.firstname}"
+  end
 end

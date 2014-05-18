@@ -13,4 +13,16 @@ describe User do
     it { should have_one(:other_info) }
     it { should have_one(:case_of_emergency_info) }
   end
+
+  context "methods" do
+    describe "#fullname" do
+      it "returns fullname of users" do
+        james = create(:user)
+        rose = create(:user)
+
+        james.fullname.should eql("#{james.lastname} #{james.firstname}")
+        rose.fullname.should eql("#{james.lastname} #{james.firstname}")
+      end
+    end
+  end
 end

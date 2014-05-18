@@ -18,14 +18,9 @@ class PagesController < ApplicationController
   def about_us
   end
   def registration
-    # binding.pry
     @user = User.new
-    # binding.pry
-    # @user.personal_info.build
-    # binding.pry
-    # @user.other_info.build
-    # binding.pry
-    # @user.case_of_emergency_info.build
-    # binding.pry
+    @user.build_personal_info
+    @user.build_other_info
+    @user.build_case_of_emergency_info
   end
 end

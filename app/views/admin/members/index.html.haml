@@ -1,1 +1,16 @@
 %h4 Members Pages
+
+%table
+  %tr
+    %th FullName
+    %th Email
+    %th Dojo
+    %th Instructor
+    %th Belt
+  - @users.each do |user|
+    %tr
+      %td= user.id
+      %td= user.id
+      %td= user.id
+      %td= user.id
+      %td= user.id

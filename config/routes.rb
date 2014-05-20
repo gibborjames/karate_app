@@ -12,6 +12,7 @@ Karate::Application.routes.draw do
   end
   # by pass namespace for member to force account path
   match "/account" => "member/account#index", via: [:get]
+  match "/account/edit" => "member/account#edit", via: [:get]
 
   resources :users, :only => [:create]
 

@@ -6,4 +6,8 @@ class Member::AccountController < ApplicationController
   def index
     @me = current_user
   end
+
+  def edit
+
+  end
 end

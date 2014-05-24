@@ -9,5 +9,8 @@ FactoryGirl.define do
     password 'password'
     password_confirmation 'password'
     admin true
+    association(:case_of_emergency_info)
+    association(:other_info)
+    association(:personal_info)
   end
 end

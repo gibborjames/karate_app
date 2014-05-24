@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524153159) do
+ActiveRecord::Schema.define(version: 20140524154546) do
+
+  create_table "announcements", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "case_of_emergency_infos", force: true do |t|
     t.string   "name"

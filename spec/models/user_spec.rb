@@ -12,6 +12,7 @@ describe User do
     it { should have_one(:personal_info) }
     it { should have_one(:other_info) }
     it { should have_one(:case_of_emergency_info) }
+    it { should have_many(:announcements) }
   end
 
   context "methods" do

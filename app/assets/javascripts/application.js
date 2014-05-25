@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require registration_modal
+//= require admin/announcement
+//= require app
 //= require_tree .

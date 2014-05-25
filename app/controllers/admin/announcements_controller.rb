@@ -1,4 +1,5 @@
 class Admin::AnnouncementsController < Admin::BaseController
+  include  Admin::AnnouncementHelper
 
   def index
     @announcements = Announcement.all

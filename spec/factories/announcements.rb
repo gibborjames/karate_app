@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :announcement do
     title "MyString"
     description "MyString"
+    is_announce false
     user_id 1
   end
 end

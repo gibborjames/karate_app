@@ -18,6 +18,17 @@ Karate::Application.routes.draw do
   resources :users, :only => [:create]
 
   root to: "pages#index"
+
+  namespace :api do
+    namespace :v1 do
+      resources :announcements, :only => [:show] do
+        member do
+          put :publish
+          get :publish
+        end
+      end
+    end
+  end
   match "/account" => "member/account#index", via: [:get]
   match "/news" => "pages#news", via: [:get]
   match "/announcement" => "pages#announcement", via: [:get]

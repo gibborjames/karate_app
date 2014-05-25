@@ -25,6 +25,8 @@ Karate::Application.routes.draw do
         member do
           put :publish
           get :publish
+          put :hide
+          get :hide
         end
       end
     end

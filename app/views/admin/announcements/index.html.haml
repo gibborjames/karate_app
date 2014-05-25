@@ -1,1 +1,12 @@
 %h4 Announcements Index
+
+%table
+  %tr
+    %th Title
+    %th Status
+    %th Action
+  - @announcements.each do |announcement|
+    %tr
+      %td= announcement.title
+      %td Status
+      %td Action

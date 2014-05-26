@@ -7,7 +7,7 @@
     %th Action
   - @announcements.each do |announcement|
     %tr
-      %td= announcement.title
+      %td= link_to announcement.title, [:admin, announcement]
       %td= checking(announcement)
       %td
         = link_to "Hide", '#'
